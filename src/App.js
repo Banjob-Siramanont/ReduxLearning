@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import { connect } from 'react-redux'
+import React from 'react';
+import { connect } from 'react-redux';
 
  class App extends React.Component {
   render() {
@@ -18,14 +18,14 @@ const mapStateToProps = state =>{
     return{
         data: state.count
     }
-}
+};
 
 const mapDispatchToProps = dispatch =>{
     return{
-        plus : ()=>dispatch({type:"INCREASE"}),
-        substract : ()=>dispatch({type:"DECREASE"}),
-        reset : ()=>dispatch({type:"RESET"})
+        plus : () => dispatch({type:"INCREASE"}),
+        substract : () => dispatch({type:"DECREASE"}),
+        reset : () => dispatch({type:"RESET"})
     }
-}
+};
 
-export default connect(mapStateToProps,mapDispatchToProps)(App)
+export default connect(mapStateToProps,mapDispatchToProps)(App);
